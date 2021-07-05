@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Welcome to my application</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="container-fluid text-center">
+		<h1>Welcome to my application</h1>
+		<h2>
+			<a th:href="@{/products}">Manage products</a>
+		</h2>
+	</div>
+</body>
+</html>

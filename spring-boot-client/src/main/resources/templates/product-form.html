@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Add new product</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="container">
+	
+		<h3>Product Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Product</p>
+	
+		<form action="#" th:action="@{/save}"
+						 th:object="${product}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
+			
+			<input type="text" th:field="*{name}"
+					class="form-control mb-4 col-4" placeholder="Name">
+
+			<input type="text" th:field="*{price}"
+					class="form-control mb-4 col-4" placeholder="Price">
+
+			<input type="text" th:field="*{description}"
+					class="form-control mb-4 col-4" placeholder="Description">
+				
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/all-product}">Back to Employees List</a>
+		
+	</div>
+</body>
+</html>
